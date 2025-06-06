@@ -1,0 +1,17 @@
+plant_id,year,employees,sales_figures_mio,volume_tsd_pieces,prices_fix_mio,prices_var_mio,product_area
+14511375-6565-4cb4-919c-6e06da565743,2021,520,75.3,420,12.5,44.2,Automotive Lighting
+19f597b8-455b-437e-ba4b-d35df8afec1d,2021,380,51.2,300,9.2,29.5,Opto Semiconductors
+4ba9bc95-a43a-4b92-9f54-6b87840b5b8b,2021,620,67.4,700,10.5,40.0,Opto + Automotive
+4f956f79-9446-4ced-bd21-dc5abbb22e8a,2021,430,60.0,350,10.0,35.0,Digital Systems
+14511375-6565-4cb4-919c-6e06da565743,2022,540,78.9,440,13.1,45.0,Automotive Lighting
+19f597b8-455b-437e-ba4b-d35df8afec1d,2022,400,54.0,310,9.5,30.2,Opto Semiconductors
+4ba9bc95-a43a-4b92-9f54-6b87840b5b8b,2022,650,72.2,730,10.8,41.7,Opto + Automotive
+4f956f79-9446-4ced-bd21-dc5abbb22e8a,2022,440,63.1,370,10.3,36.5,Digital Systems
+14511375-6565-4cb4-919c-6e06da565743,2023,550,82.1,465,13.3,46.9,Automotive Lighting
+19f597b8-455b-437e-ba4b-d35df8afec1d,2023,410,56.8,325,9.6,31.4,Opto Semiconductors
+4ba9bc95-a43a-4b92-9f54-6b87840b5b8b,2023,660,76.9,765,11.0,43.5,Opto + Automotive
+4f956f79-9446-4ced-bd21-dc5abbb22e8a,2023,460,67.5,390,10.7,38.1,Digital Systems
+14511375-6565-4cb4-919c-6e06da565743,2024,565,84.5,475,13.5,48.0,Automotive Lighting
+19f597b8-455b-437e-ba4b-d35df8afec1d,2024,415,58.3,330,9.8,32.0,Opto Semiconductors
+4ba9bc95-a43a-4b92-9f54-6b87840b5b8b,2024,670,80.3,780,11.3,44.2,Opto + Automotive
+4f956f79-9446-4ced-bd21-dc5abbb22e8a,2024,470,70.2,400,11.0,39.0,Digital Systems
