@@ -1,0 +1,106 @@
+customer_id,address,city,plz,region,branch,employees
+ed7ab174-a673-4f25-a477-a8b3293ab84f,93 Musterstraße,Augsburg,86150,Süd,Logistics,116
+4bc484c1-ad2a-4260-aeac-689317cfb803,103 Musterstraße,Hamburg,20095,Nord,Retail,476
+9dbb1b59-5adb-4f28-82bf-cbba499dbf1e,88 Musterstraße,Nürnberg,90402,Süd,Automotive,109
+3697d442-f081-45c4-9a3b-dd9a239e68c8,53 Musterstraße,Stuttgart,70173,Süd,Retail,353
+218eb537-e757-41c9-b0c0-69432607e55b,130 Musterstraße,Köln,50667,Mitte,Healthcare,286
+d12a2f18-0693-444a-980f-9b7e6b14ed33,58 Musterstraße,Hannover,30159,Nord,Food & Beverage,262
+b36680e5-2bde-4dec-bbd9-4b685b5955c3,59 Musterstraße,Hamburg,20095,Nord,Logistics,691
+51299cde-953d-45d9-a8a6-5d0f0c6a9844,190 Musterstraße,Stuttgart,70173,Süd,Logistics,967
+f3ac2dd0-ef42-48e9-8cdd-0c8d113f1571,55 Musterstraße,Augsburg,86150,Süd,Healthcare,841
+3b21a604-cbfc-4a00-b658-99c4ee2a82ae,51 Musterstraße,Kiel,24103,Nord,Logistics,30
+1873cb25-71fa-4f69-bf18-9e3b14ae576e,18 Musterstraße,Kiel,24103,Nord,Healthcare,610
+3d6ca9ae-c219-4ccf-9494-e8cbef1259f2,9 Musterstraße,Köln,50667,Mitte,Retail,574
+84620d24-f080-4d96-8d11-b8282a92e43a,92 Musterstraße,Leipzig,4109,Mitte,Logistics,965
+8e2022d7-e5b6-42f3-8a42-1fb66800e615,8 Musterstraße,Augsburg,86150,Süd,Logistics,44
+78779098-114e-4164-a0a2-3f1705da93ad,164 Musterstraße,Frankfurt am Main,60311,Mitte,Retail,881
+6447a51e-6258-44cc-acb5-737f72124abb,134 Musterstraße,Köln,50667,Mitte,Food & Beverage,115
+5f1440bb-f439-48d7-b624-c205a972eb3b,191 Musterstraße,Frankfurt am Main,60311,Mitte,Retail,739
+d41ffaad-7589-472f-a406-4f65f09565b0,190 Musterstraße,Köln,50667,Mitte,Healthcare,279
+27dae6f4-37ab-452f-ad79-25f5da2437ef,15 Musterstraße,Augsburg,86150,Süd,Food & Beverage,736
+cbc37494-c91a-42bd-9599-8d3c12a63c16,40 Musterstraße,Bremen,28195,Nord,Automotive,729
+c635f12c-74ce-4f5a-b9c0-8eb215b38a31,111 Musterstraße,Bremen,28195,Nord,Automotive,801
+7274af6f-8a5d-4da2-9c01-2a69ed46b4cd,188 Musterstraße,Frankfurt am Main,60311,Mitte,Healthcare,502
+b31fff8c-77cd-4e9f-bce7-3682e94aadd5,15 Musterstraße,Hamburg,20095,Nord,Automotive,74
+80b46bb8-908b-4e9a-a6ca-f56c43d8beb7,9 Musterstraße,Kiel,24103,Nord,Manufacturing,657
+0be3db5d-827c-4e9f-957d-c360b669cf62,81 Musterstraße,Nürnberg,90402,Süd,IT Services,428
+20a9e2a3-af1d-4ba2-bd59-220729c406b8,5 Musterstraße,Kiel,24103,Nord,Retail,240
+4cf1aa46-c4aa-4fd0-91bf-266eaca75f4c,28 Musterstraße,Frankfurt am Main,60311,Mitte,Logistics,210
+3a10cb9c-83dc-49f7-a342-c3ce9d35c459,48 Musterstraße,Frankfurt am Main,60311,Mitte,Logistics,416
+4adda254-e615-4586-84a9-6ff829551405,37 Musterstraße,Leipzig,4109,Mitte,IT Services,693
+a79a9c6c-0ce3-4bd6-8a72-a0b9d64c9cc1,35 Musterstraße,Düsseldorf,40213,Mitte,Manufacturing,748
+d5fec242-ad85-4d07-bbcd-d0b2e57dd50d,131 Musterstraße,Kiel,24103,Nord,Manufacturing,14
+b9a663da-51c4-40c3-82cc-ddeb6059d721,142 Musterstraße,Düsseldorf,40213,Mitte,Logistics,804
+339960b7-1473-40e8-9d60-d74a83ff835e,15 Musterstraße,Kiel,24103,Nord,Retail,563
+73aae4e5-8547-475a-a929-18ae8fa7a72a,63 Musterstraße,Kiel,24103,Nord,Logistics,250
+53161a52-7c4b-4f34-abff-cd540cd97d75,132 Musterstraße,Hannover,30159,Nord,Food & Beverage,494
+2ac5a4a2-a977-4fea-8406-8d72073a03df,143 Musterstraße,Nürnberg,90402,Süd,IT Services,550
+940405a6-37d5-427c-8130-c8337cf9d977,71 Musterstraße,Hannover,30159,Nord,IT Services,252
+b4cbfe90-1742-4042-a4a1-7a22b42a856b,66 Musterstraße,Leipzig,4109,Mitte,Retail,566
+cc3a1980-e391-4d90-870d-223b535e1ae8,134 Musterstraße,Frankfurt am Main,60311,Mitte,Healthcare,37
+0012705c-4fec-48c2-9d97-0d206c972b32,75 Musterstraße,Köln,50667,Mitte,Retail,357
+3a99f05d-7472-4b42-9012-e8a5bf398aa9,190 Musterstraße,Kiel,24103,Nord,Manufacturing,394
+01df5f92-668c-40e7-bf56-008a074e6b80,190 Musterstraße,Kiel,24103,Nord,Manufacturing,637
+6b51d352-8a96-4f16-8186-a311289dfbfe,3 Musterstraße,Hamburg,20095,Nord,Logistics,719
+209520bd-4e0d-4542-a383-45ce7b8c73da,62 Musterstraße,München,80331,Süd,Automotive,234
+1c615d08-f269-40a8-beab-bc674fc2ce00,172 Musterstraße,Stuttgart,70173,Süd,Logistics,836
+c340222c-a14f-4df2-9a79-57e0aa356590,96 Musterstraße,Leipzig,4109,Mitte,Manufacturing,701
+f70e70fa-cf46-44f7-b0d9-46450f47dec2,186 Musterstraße,Bremen,28195,Nord,Healthcare,277
+ef98a97f-aeff-4fb9-890b-bde6de9636fc,130 Musterstraße,Düsseldorf,40213,Mitte,IT Services,122
+7cbedc72-29a4-49d3-a437-2152e79c9e7a,184 Musterstraße,Hamburg,20095,Nord,Manufacturing,708
+2b7fe2c5-3a00-4994-bdea-20116bff0573,130 Musterstraße,Bremen,28195,Nord,Healthcare,575
+075b683c-5311-4ae7-a340-dca12d785bf2,129 Musterstraße,München,80331,Süd,IT Services,647
+ee60f83a-521e-465f-b179-400407cbc6b0,172 Musterstraße,Frankfurt am Main,60311,Mitte,Retail,681
+8c16e2dd-2aec-49fa-8c9d-a7d2db5f3ce7,68 Musterstraße,Leipzig,4109,Mitte,Logistics,212
+61f7506f-58b3-4316-b827-30d599f0e811,38 Musterstraße,München,80331,Süd,Automotive,893
+91b4355e-e8c5-4ce6-841a-de0f8cf7660d,139 Musterstraße,Köln,50667,Mitte,Logistics,761
+3b6bcb24-8ef1-45a9-9717-12bc3f3cfbe7,124 Musterstraße,Hamburg,20095,Nord,IT Services,335
+170667ae-61bd-47b9-b75e-5a79ced53d9d,148 Musterstraße,Kiel,24103,Nord,Healthcare,964
+741eaad9-07ec-4251-b591-fb178f8043c6,195 Musterstraße,Stuttgart,70173,Süd,Logistics,156
+b0df5d82-0832-4fa3-98c0-8d60f20c730e,161 Musterstraße,Augsburg,86150,Süd,Logistics,347
+40b84ad8-c579-43c2-8b06-6242f3b46735,185 Musterstraße,Kiel,24103,Nord,Manufacturing,955
+b11fc97d-586b-4a43-92db-8444f69cc813,42 Musterstraße,Nürnberg,90402,Süd,IT Services,272
+ebd93d98-05aa-4e1c-b91c-ee06126e60fe,60 Musterstraße,Leipzig,4109,Mitte,Manufacturing,11
+27531b5f-a25f-4d84-9081-fc3bd45b45ee,140 Musterstraße,Hannover,30159,Nord,Automotive,46
+33a9edd8-b2c7-4d83-842d-920239d3fa02,9 Musterstraße,Nürnberg,90402,Süd,Manufacturing,108
+25d9c44b-6473-46b1-8900-78791497a237,131 Musterstraße,Augsburg,86150,Süd,Healthcare,161
+5d2fc83e-b78b-4cde-aa18-a4415b50ea89,161 Musterstraße,Leipzig,4109,Mitte,Healthcare,596
+ea66eb12-6ee3-48ae-b807-a179ea254890,164 Musterstraße,Hannover,30159,Nord,Food & Beverage,113
+a586db9b-4807-433f-ae8e-ad17f976383a,112 Musterstraße,Düsseldorf,40213,Mitte,Food & Beverage,482
+8a94603c-1b06-404c-89cb-e920b5cfcfae,93 Musterstraße,München,80331,Süd,Retail,905
+bf61abb4-59be-484e-a95b-bc0922111055,194 Musterstraße,Köln,50667,Mitte,Food & Beverage,172
+e7a60c2a-3ab6-4fa8-a817-bf5f2a99b0e0,161 Musterstraße,Hamburg,20095,Nord,Healthcare,810
+4afca6a5-b002-44b5-95dc-483c683c45cc,48 Musterstraße,Frankfurt am Main,60311,Mitte,Healthcare,513
+8013c11f-cf27-426e-bc38-5e94c905ddc4,145 Musterstraße,Nürnberg,90402,Süd,Manufacturing,697
+7a548301-4c46-48a2-b9c6-cdc0a0d4f317,119 Musterstraße,Nürnberg,90402,Süd,Food & Beverage,759
+95fbff9c-82c2-4b08-8446-e948a91daa8b,109 Musterstraße,Köln,50667,Mitte,IT Services,447
+36020d6c-12f6-4bd3-81da-b33682b1b6af,21 Musterstraße,Nürnberg,90402,Süd,Food & Beverage,618
+53e9b3d1-88e3-4a34-8c84-d68e572a13e9,197 Musterstraße,Augsburg,86150,Süd,Healthcare,838
+b8044ac8-9251-4e60-946e-373211466939,35 Musterstraße,Augsburg,86150,Süd,Manufacturing,521
+4a0450c6-36fb-4543-aac2-c96badf099cf,158 Musterstraße,Hannover,30159,Nord,Automotive,55
+1b1a1f11-be4a-4f44-b3f2-8085b035c7d5,99 Musterstraße,Bremen,28195,Nord,Healthcare,754
+5a45cd8b-76f5-4462-aa3c-88bf90e923cf,93 Musterstraße,Hannover,30159,Nord,Manufacturing,311
+d22d494a-1447-4f09-98be-91e488fde08a,99 Musterstraße,Kiel,24103,Nord,Healthcare,125
+b1ba06d1-95be-48cf-bc84-24c12795246c,160 Musterstraße,München,80331,Süd,Logistics,170
+6fac0495-3d42-43de-998a-705a5f9cdffa,18 Musterstraße,Augsburg,86150,Süd,Manufacturing,744
+1a08112c-b89d-4596-9828-ce1680258eb4,67 Musterstraße,Köln,50667,Mitte,Food & Beverage,801
+e7041a6c-60c7-460a-b165-b4e7a6754c6c,175 Musterstraße,Leipzig,4109,Mitte,Food & Beverage,672
+36530cc6-3622-4357-9e33-dc6a2a7b2895,155 Musterstraße,Düsseldorf,40213,Mitte,Retail,395
+24000dd5-f3ad-45d4-afae-94f503d9efdc,104 Musterstraße,Frankfurt am Main,60311,Mitte,Manufacturing,402
+2eba9771-8099-40de-8b9a-fbaefcbbebcc,176 Musterstraße,Stuttgart,70173,Süd,Logistics,486
+ebc04148-7092-46b9-9ec7-6604af9f10c6,26 Musterstraße,Düsseldorf,40213,Mitte,IT Services,827
+de79aca9-fa34-4c41-98c9-eb6ee3ea9eec,13 Musterstraße,Hannover,30159,Nord,Healthcare,515
+0832e557-3263-41e9-86de-5244c7ee4806,36 Musterstraße,München,80331,Süd,Automotive,29
+8448947a-d42c-454f-a560-396ca8a27223,144 Musterstraße,Hannover,30159,Nord,Food & Beverage,981
+fcbf8574-c692-4188-95f4-fa4994dbda89,143 Musterstraße,Nürnberg,90402,Süd,Healthcare,363
+3223991e-5673-4586-9ff1-d611bc592715,191 Musterstraße,Leipzig,4109,Mitte,Food & Beverage,60
+f0fb4250-67bc-4995-874d-ffbb61643b8d,63 Musterstraße,Bremen,28195,Nord,Food & Beverage,134
+802a3025-804b-4bb5-bc74-85108cda6a68,58 Musterstraße,Köln,50667,Mitte,Food & Beverage,314
+150ea8e2-08fc-4767-a383-c017725a9920,15 Musterstraße,Köln,50667,Mitte,Food & Beverage,453
+6989bcfb-9991-4a20-814a-c75687ba723f,8 Musterstraße,Hamburg,20095,Nord,Automotive,581
+46751c6d-95f9-4656-9f4f-8645b28db7e7,196 Musterstraße,Kiel,24103,Nord,Food & Beverage,886
+adfa66fb-5646-4ac5-932d-2cbe86e88e99,99 Musterstraße,Düsseldorf,40213,Mitte,Logistics,945
+506fb5b1-a33a-46fa-84da-c58f044f9f35,124 Musterstraße,Bremen,28195,Nord,Retail,679
+691b9cf3-5edb-4d89-98fb-b6c454371a87,120 Musterstraße,München,80331,Süd,Logistics,796
+b668885b-5072-4b5f-be41-00df83c4dcd9,90 Musterstraße,Düsseldorf,40213,Mitte,Automotive,483
+7bf1147c-eda4-49c7-9b08-4ecff2808ec2,23 Musterstraße,Bremen,28195,Nord,Logistics,402

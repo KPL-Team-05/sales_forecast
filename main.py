@@ -79,6 +79,60 @@ def insert_csv_into_database():
             insert_statement = 'INSERT INTO yearly_data VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)'
             cursor.execute(insert_statement, (str(uuid4()), plant_id, year, employees,
                            sales_figures_mio, volume_tsd_pieces, prices_fix_mio, prices_var_mio, product_area))
+            
+    
+    with open('data/customer_information.csv', 'r', encoding='utf-8') as file:
+        csv_file = csv.reader(file)
+        next(csv_file)
+        for line in csv_file:
+            customer_id = line[0]
+            address = line[1]
+            city = line[2]
+            plz= line[3]
+            region = line[4]
+            branch = line[5]
+            employees = line[6]
+            insert_statement = "INSERT INTO customer_information VALUES (?, ?, ?, ?, ?, ?, ?)"
+            cursor.execute(insert_statement, (customer_id, address, city, plz, region, branch, employees))
+
+    with open('data/sales_data_multi_customers_per_day.csv', 'r', encoding='utf-8') as file:
+        csv_file = csv.reader(file)
+        next(csv_file)
+        for line in csv_file:
+            date = line[0]
+            product = line[1]
+            customer_id = line[2]
+            units = line[3]
+            insert_statement = "INSERT INTO sales_daily_data VALUES (?, ?, ?, ?, ?)"
+            cursor.execute(insert_statement, (str(uuid4()), date, product, customer_id, units))
+
+    with open('data/sales_data_with_products.csv', 'r', encoding='utf-8') as file:
+        csv_file = csv.reader(file)
+        next(csv_file)
+        for line in csv_file:
+            timestamp = line[0]
+            amount = line[1]
+            product_a = line[2]
+            product_b = line[3]
+            product_c = line[4]
+            insert_statement = "INSERT INTO sales_data_product VALUES (?, ?, ?, ?, ?, ?)"
+            cursor.execute(insert_statement, (str(uuid4()), timestamp, amount, product_a, product_b, product_c))
+
+    with open('data/workschedule.csv', 'r', encoding='utf-8') as file:
+        csv_file = csv.reader(file)
+        next(csv_file)
+        for line in csv_file:
+            shift_date = line[0]
+            section = line[1]
+            product = line[2]
+            planned_units = line[3]
+            cycle_time_seconds = line[4]
+            shift_type = line [5]
+            shift_start = line [6]
+            shift_end = line [7]
+            insert_statement = "INSERT INTO workschedule VALUES (?, ?, ?, ?, ?, ?, ? ,? ,?)"
+            cursor.execute(insert_statement, (str(uuid4()), shift_date, section, product, planned_units, cycle_time_seconds, shift_type, shift_start, shift_end))
+
 
     connection.commit()
 
@@ -124,6 +178,86 @@ def get_plants_from_database() -> pd.DataFrame:
     sales_data = cursor.execute('SELECT * FROM plant').fetchall()
     return pd.DataFrame(sales_data, columns=['id', 'name', 'plz', 'region', 'country', 'speciality'])
 
+def get_customer_informations_from_database() -> pd.DataFrame:
+    """Retrieve customer information data from the database.
+
+    This function connects to a SQLite database and retrieves all records from the 
+    'customer_information' table. The retrieved data is then converted into a pandas DataFrame 
+    with specified column names.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the plant data with columns 
+        ['customer_id', 'address', 'city', 'plz', 'region', 'branch', 'employees'].
+
+    Raises:
+        sqlite3.Error: If there is an error connecting to the database or executing 
+        the SQL query.
+    """
+    connection = sqlite3.connect('database/forecast_data.db')
+    cursor = connection.cursor()
+    customer_information = cursor.execute('SELECT * FROM customer_information').fetchall()
+    return pd.DataFrame(customer_information, columns=['customer_id', 'address', 'city', 'plz', 'region', 'branch', 'employees'])
+
+def get_sales_daily_data_from_database() -> pd.DataFrame:
+    """Retrieve sales daily data from the database.
+
+    This function connects to a SQLite database and retrieves all records from the 
+    'sales_daily_data' table. The retrieved data is then converted into a pandas DataFrame 
+    with specified column names.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the plant data with columns 
+        ['id', 'date', 'product', 'customer_id', 'units'])
+
+    Raises:
+        sqlite3.Error: If there is an error connecting to the database or executing 
+        the SQL query.
+    """
+    connection = sqlite3.connect('database/forecast_data.db')
+    cursor = connection.cursor()
+    sales_daily_data = cursor.execute('SELECT * FROM sales_daily_data').fetchall()
+    return pd.DataFrame(sales_daily_data, columns=['id', 'date', 'product', 'customer_id', 'units'])
+
+def get_sales_data_product_from_database() -> pd.DataFrame:
+    """Retrieve plant data from the database.
+
+    This function connects to a SQLite database and retrieves all records from the 
+    'sales_data_product' table. The retrieved data is then converted into a pandas DataFrame 
+    with specified column names.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the plant data with columns 
+        ['id', 'timestamp', 'amount', 'product_a', 'product_b', 'product_c'])
+
+    Raises:
+        sqlite3.Error: If there is an error connecting to the database or executing 
+        the SQL query.
+    """
+    connection = sqlite3.connect('database/forecast_data.db')
+    cursor = connection.cursor()
+    sales_data_product = cursor.execute('SELECT * FROM sales_data_product').fetchall()
+    return pd.DataFrame(sales_data_product, columns=['id', 'timestamp', 'amount', 'product_a', 'product_b', 'product_c'])
+
+
+def get_workschedule_from_database() -> pd.DataFrame:
+    """Retrieve yearly data from the database.
+
+    This function connects to a SQLite database and retrieves all records from the 
+    `workschedule` table. The data is then converted into a pandas DataFrame with 
+    specified column names.
+
+    Returns:
+        pd.DataFrame: A DataFrame containing the yarly data with columns 
+        ['id', 'shift_date', 'section', 'product', 'planned_units', 'cycle_time_seconds', 'shift_type','shift_start', 'shift_end'])
+
+    Raises:
+        sqlite3.Error: If there is an error connecting to the database or executing 
+        the SQL query.
+    """
+    connection = sqlite3.connect('database/forecast_data.db')
+    cursor = connection.cursor()
+    workschedule = cursor.execute('SELECT * FROM workschedule').fetchall()
+    return pd.DataFrame(workschedule, columns=['id', 'shift_date', 'section', 'product', 'planned_units', 'cycle_time_seconds', 'shift_type','shift_start', 'shift_end'])
 
 def get_yearly_data_from_database() -> pd.DataFrame:
     """Retrieve yearly data from the database.
@@ -169,6 +303,20 @@ def main():
 
     yearly_data = get_yearly_data_from_database()
     print(yearly_data)
+
+    customer_informations = get_customer_informations_from_database()
+    print(customer_informations)
+
+    sales_daily_data = get_sales_daily_data_from_database()
+    print(sales_daily_data)
+
+    sales_data_product = get_sales_data_product_from_database()
+    print(sales_data_product)
+
+    workschedule = get_workschedule_from_database()
+    print(workschedule)
+
+
 
 
 main()
