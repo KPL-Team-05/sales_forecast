@@ -28,6 +28,7 @@ CREATE TABLE IF NOT EXISTS yearly_data (
 
 CREATE TABLE IF NOT EXISTS customer_information (
     customer_id TEXT PRIMARY KEY NOT NULL,
+    name TEXT NOT NULL,
     address TEXT NOT NULL,
     city TEXT NOT NULL,
     plz INT NOT NULL,

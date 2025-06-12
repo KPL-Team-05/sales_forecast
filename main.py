@@ -86,14 +86,15 @@ def insert_csv_into_database():
         next(csv_file)
         for line in csv_file:
             customer_id = line[0]
-            address = line[1]
-            city = line[2]
-            plz= line[3]
-            region = line[4]
-            branch = line[5]
-            employees = line[6]
-            insert_statement = "INSERT INTO customer_information VALUES (?, ?, ?, ?, ?, ?, ?)"
-            cursor.execute(insert_statement, (customer_id, address, city, plz, region, branch, employees))
+            name = line [1]
+            address = line[2]
+            city = line[3]
+            plz= line[4]
+            region = line[5]
+            branch = line[6]
+            employees = line[7]
+            insert_statement = "INSERT INTO customer_information VALUES (?, ?, ?, ?, ?, ?, ?, ?)"
+            cursor.execute(insert_statement, (customer_id, name, address, city, plz, region, branch, employees))
 
     with open('data/sales_data_multi_customers_per_day.csv', 'r', encoding='utf-8') as file:
         csv_file = csv.reader(file)
@@ -187,7 +188,7 @@ def get_customer_informations_from_database() -> pd.DataFrame:
 
     Returns:
         pd.DataFrame: A DataFrame containing the plant data with columns 
-        ['customer_id', 'address', 'city', 'plz', 'region', 'branch', 'employees'].
+        ['customer_id', 'name', 'address', 'city', 'plz', 'region', 'branch', 'employees'].
 
     Raises:
         sqlite3.Error: If there is an error connecting to the database or executing 
@@ -196,7 +197,7 @@ def get_customer_informations_from_database() -> pd.DataFrame:
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
     customer_information = cursor.execute('SELECT * FROM customer_information').fetchall()
-    return pd.DataFrame(customer_information, columns=['customer_id', 'address', 'city', 'plz', 'region', 'branch', 'employees'])
+    return pd.DataFrame(customer_information, columns=['customer_id', 'name', 'address', 'city', 'plz', 'region', 'branch', 'employees'])
 
 def get_sales_daily_data_from_database() -> pd.DataFrame:
     """Retrieve sales daily data from the database.
@@ -289,6 +290,10 @@ def main():
     3. Retrieves sales data from the database.
     4. Retrieves plant data from the database.
     5. Retrieves yearly data from the database.
+    6. Retrieves customer data from database.
+    7. Retrieves sales_daily_data from database.
+    8. Retrieves sales_data_product from database.
+    9. Retrieves workschedule data from database.
 
     It does not take any parameters and does not return any values.
     """
