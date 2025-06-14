@@ -6,16 +6,7 @@ import pandas as pd
 
 
 def setup_database():
-    """Sets up the database by creating the necessary schema and initial data.
-
-    This function connects to a SQLite database located at 'database/forecast_data.db',
-    executes the SQL commands found in 'database/schema.sql' to create the database schema,
-    and then executes the SQL commands in 'database/setup.sql' to populate the database with
-    initial data.
-
-    Raises:
-        sqlite3.Error: If there is an error while executing the SQL commands.
-        FileNotFoundError: If the specified .sql files do not exist.
+    """Python connects with database. Opens and read schema.sql and setup.up, looks at structure and commit it
     """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
@@ -30,13 +21,10 @@ def setup_database():
 def insert_csv_into_database():
     """Inserts data from a CSV file into a SQLite database.
 
-    This function connects to a SQLite database and reads sales data from a specified CSV file. 
-    For each row in the CSV, it extracts the timestamp and amount, and inserts them into the 
-    'sales_data' table in the database, generating a unique identifier for each entry.
+    Connects to a SQLite database and reads sales data from a specified CSV file. 
+    For each row in the CSV, it extracts data from splits and inserts them into the 
+    table in the database, generating a unique identifier for each entry.
 
-    Raises:
-        sqlite3.Error: If there is an error connecting to the database or executing the insert statement.
-        FileNotFoundError: If the specified CSV file does not exist.
     """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
@@ -139,20 +127,6 @@ def insert_csv_into_database():
 
 
 def get_sales_data_from_database() -> pd.DataFrame:
-    """Retrieves sales data from the database and returns it as a pandas DataFrame.
-
-    This function connects to a SQLite database, fetches all records from the 
-    'sales_data' table, and converts the results into a pandas DataFrame with 
-    specified column names.
-
-    Returns:
-        pd.DataFrame: A DataFrame containing the sales data with columns 
-        ['id', 'timestamp', 'amount'].
-
-    Raises:
-        sqlite3.Error: If there is an error connecting to the database or 
-        executing the query.
-    """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
     sales_data = cursor.execute('SELECT * FROM sales_data').fetchall()
@@ -162,7 +136,7 @@ def get_sales_data_from_database() -> pd.DataFrame:
 def get_plants_from_database() -> pd.DataFrame:
     """Retrieve plant data from the database.
 
-    This function connects to a SQLite database and retrieves all records from the 
+    Connects to a SQLite database and retrieves all records from the 
     'plant' table. The retrieved data is then converted into a pandas DataFrame 
     with specified column names.
 
@@ -170,9 +144,7 @@ def get_plants_from_database() -> pd.DataFrame:
         pd.DataFrame: A DataFrame containing the plant data with columns 
         ['id', 'name', 'plz', 'region', 'country', 'speciality'].
 
-    Raises:
-        sqlite3.Error: If there is an error connecting to the database or executing 
-        the SQL query.
+        
     """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
@@ -182,7 +154,7 @@ def get_plants_from_database() -> pd.DataFrame:
 def get_customer_informations_from_database() -> pd.DataFrame:
     """Retrieve customer information data from the database.
 
-    This function connects to a SQLite database and retrieves all records from the 
+    Connects to a SQLite database and retrieves all records from the 
     'customer_information' table. The retrieved data is then converted into a pandas DataFrame 
     with specified column names.
 
@@ -190,9 +162,7 @@ def get_customer_informations_from_database() -> pd.DataFrame:
         pd.DataFrame: A DataFrame containing the plant data with columns 
         ['customer_id', 'name', 'address', 'city', 'plz', 'region', 'branch', 'employees'].
 
-    Raises:
-        sqlite3.Error: If there is an error connecting to the database or executing 
-        the SQL query.
+        
     """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
@@ -202,7 +172,7 @@ def get_customer_informations_from_database() -> pd.DataFrame:
 def get_sales_daily_data_from_database() -> pd.DataFrame:
     """Retrieve sales daily data from the database.
 
-    This function connects to a SQLite database and retrieves all records from the 
+    Connects to a SQLite database and retrieves all records from the 
     'sales_daily_data' table. The retrieved data is then converted into a pandas DataFrame 
     with specified column names.
 
@@ -210,9 +180,7 @@ def get_sales_daily_data_from_database() -> pd.DataFrame:
         pd.DataFrame: A DataFrame containing the plant data with columns 
         ['id', 'date', 'product', 'customer_id', 'units'])
 
-    Raises:
-        sqlite3.Error: If there is an error connecting to the database or executing 
-        the SQL query.
+
     """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
@@ -222,7 +190,7 @@ def get_sales_daily_data_from_database() -> pd.DataFrame:
 def get_sales_data_product_from_database() -> pd.DataFrame:
     """Retrieve plant data from the database.
 
-    This function connects to a SQLite database and retrieves all records from the 
+    Connects to a SQLite database and retrieves all records from the 
     'sales_data_product' table. The retrieved data is then converted into a pandas DataFrame 
     with specified column names.
 
@@ -230,9 +198,7 @@ def get_sales_data_product_from_database() -> pd.DataFrame:
         pd.DataFrame: A DataFrame containing the plant data with columns 
         ['id', 'timestamp', 'amount', 'product_a', 'product_b', 'product_c'])
 
-    Raises:
-        sqlite3.Error: If there is an error connecting to the database or executing 
-        the SQL query.
+
     """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
@@ -243,7 +209,7 @@ def get_sales_data_product_from_database() -> pd.DataFrame:
 def get_workschedule_from_database() -> pd.DataFrame:
     """Retrieve yearly data from the database.
 
-    This function connects to a SQLite database and retrieves all records from the 
+    Connects to a SQLite database and retrieves all records from the 
     `workschedule` table. The data is then converted into a pandas DataFrame with 
     specified column names.
 
@@ -251,9 +217,7 @@ def get_workschedule_from_database() -> pd.DataFrame:
         pd.DataFrame: A DataFrame containing the yarly data with columns 
         ['id', 'shift_date', 'section', 'product', 'planned_units', 'cycle_time_seconds', 'shift_type','shift_start', 'shift_end'])
 
-    Raises:
-        sqlite3.Error: If there is an error connecting to the database or executing 
-        the SQL query.
+
     """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
@@ -263,7 +227,7 @@ def get_workschedule_from_database() -> pd.DataFrame:
 def get_yearly_data_from_database() -> pd.DataFrame:
     """Retrieve yearly data from the database.
 
-    This function connects to a SQLite database and retrieves all records from the 
+    Connects to a SQLite database and retrieves all records from the 
     `yearly_data` table. The data is then converted into a pandas DataFrame with 
     specified column names.
 
@@ -271,9 +235,7 @@ def get_yearly_data_from_database() -> pd.DataFrame:
         pd.DataFrame: A DataFrame containing the yarly data with columns 
         ['id', 'plant_id', 'year', 'employees', 'sales_figures_mio', 'volume_tsd_pieces', 'prices_fix_mio', 'prices_var_mio', 'product_area'].
 
-    Raises:
-        sqlite3.Error: If there is an error connecting to the database or executing 
-        the SQL query.
+
     """
     connection = sqlite3.connect('database/forecast_data.db')
     cursor = connection.cursor()
@@ -284,7 +246,7 @@ def get_yearly_data_from_database() -> pd.DataFrame:
 def main():
     """Main function that orchestrates the workflow of the application.
 
-    This function performs the following tasks:
+    
     1. Sets up the database.
     2. Inserts data from a CSV file into the database.
     3. Retrieves sales data from the database.
@@ -295,7 +257,7 @@ def main():
     8. Retrieves sales_data_product from database.
     9. Retrieves workschedule data from database.
 
-    It does not take any parameters and does not return any values.
+    
     """
     setup_database()
     insert_csv_into_database()
